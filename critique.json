@@ -1,0 +1,11 @@
+{
+  "kind": "critique-panel",
+  "score": 4,
+  "axes": {
+    "clarity": { "score": 4, "notes": "Ritmo bg/surface alternado separa secciones sin líneas gruesas" },
+    "hierarchy": { "score": 4, "notes": "Proyectos overlay + featured más alto; servicios con icono→título→tag" },
+    "typography": { "score": 4, "notes": "Outfit + Source Sans 3 intactos; copy sin cambios" },
+    "motion": { "score": 4, "notes": ":active opacity/border en cards y botones" },
+    "brand": { "score": 5, "notes": "#0b1117 / #111a22 / #2dd4bf; sin glow ni purple" }
+  }
+}
