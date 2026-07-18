@@ -2333,31 +2333,55 @@
       }
 
       #inicio .hero-eyebrow {
-        margin-bottom: 22px;
-        font-size: 17px;
+        width: 0;
+        min-width: 100%;
+        margin-bottom: 26px;
+        font-size: 18px;
+      }
+
+      /*
+        El título define el ancho (~15ch, un poco más que 12ch).
+        Lead y botones se estiran exactamente a ese mismo ancho.
+      */
+      #inicio .hero-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        width: fit-content;
+        max-width: 100%;
+        height: 100%;
+        min-height: 0;
       }
 
       #inicio .hero-title {
-        font-size: clamp(3.8rem, 3.4vw, 4.55rem);
-        margin-bottom: 24px;
+        max-width: 15ch;
+        width: auto;
+        font-size: clamp(4.2rem, 3.85vw, 5.05rem);
+        line-height: 1.02;
+        margin-bottom: 28px;
       }
 
       #inicio .hero-lead {
-        font-size: 1.42rem;
-        line-height: 1.48;
-        margin-bottom: 36px;
-        max-width: 40rem;
+        width: 0;
+        min-width: 100%;
+        max-width: none;
+        font-size: 1.55rem;
+        line-height: 1.5;
+        margin-bottom: 40px;
       }
 
       #inicio .hero-actions {
-        max-width: 36rem;
+        width: 0;
+        min-width: 100%;
+        max-width: none;
         gap: 18px;
       }
 
       #inicio .hero-actions .btn {
-        min-height: 64px;
-        padding: 18px 28px;
-        font-size: 1.15rem;
+        min-height: 70px;
+        padding: 20px 28px;
+        font-size: 1.2rem;
       }
 
       /* La imagen llena la fila del grid (dentro del 100vh), sin tope artificial bajo */
@@ -2368,8 +2392,8 @@
       }
 
       #inicio .hero-meta {
-        padding-top: 18px;
-        font-size: 1.02rem;
+        padding-top: 20px;
+        font-size: 1.08rem;
       }
 
       #inicio .hero-meta strong {
