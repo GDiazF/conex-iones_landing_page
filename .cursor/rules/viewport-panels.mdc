@@ -1,0 +1,34 @@
+---
+description: Paneles exactos al viewport bajo el nav (1280, 1366, 1920, etc.)
+alwaysApply: true
+---
+
+# Viewport panels (landing Conex-Iones)
+
+Al ajustar resoluciones de escritorio/laptop (1280×768, 1366×768, 1920×1080, etc.), mantener este sistema.
+
+## Alturas
+
+1. **Secciones del menú** (`#clientes` → `#contacto`): deben caber en el área visible **bajo el nav fijo**.
+   - Usar `height` / `min-height` / `max-height: calc(100svh - var(--nav-h))` (y `100dvh` igual).
+   - **No** usar `100vh` enteros: `html { scroll-padding-top: var(--nav-h) }` y la navegación por anclas dejan la sección empezando bajo el nav; si mide `100vh`, se corta abajo.
+   - `padding` vertical pequeño (p. ej. 10–14px), **sin** sumar otra vez `--nav-h` en el padding.
+   - `overflow: hidden` + `box-sizing: border-box`.
+
+2. **Hero `#inicio`**: sí puede ser `100vh` / `100svh` con `padding-top: calc(var(--nav-h) + …)` adentro.
+
+3. Probar navegando por el **menú (anclas)**, no solo scrolleando a mano.
+
+## Contenido dentro del panel
+
+1. El contenido debe llenar el alto libre con flex/grid y `minmax(0, 1fr)`.
+2. Evitar altos fijos grandes en `px` en cards (hacen overflow o quedan cortos según el alto de pantalla).
+3. **No inflar cards** con huecos enormes adentro (`margin-top: auto` + `height: 100%` en bloques con poco texto). Preferir:
+   - filas `1fr` que repartan alto de verdad, o
+   - cards a alto natural y el bloque centrado / aire **entre** ítems.
+4. No romper layouts ya pulidos en móvil (375), tablet (768) ni el hero en 1280.
+5. **Testimonios (1280+):** 5 cards — fila de 3 (spans 2) + fila de 2 a **ancho completo** (spans 3 / 3). Alto natural, sin estirar cards a `1fr`.
+
+## Archivo
+
+Trabajar en `docs/index.html` (GitHub Pages `/docs`).
