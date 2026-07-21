@@ -59,6 +59,7 @@ $tiposOk = [
     'condominio',
     'educacional',
     'urgencia',
+    'emergencia',
     'otro',
 ];
 
@@ -90,6 +91,7 @@ $tipoLabel = [
     'condominio' => 'Condominio',
     'educacional' => 'Educacional',
     'urgencia' => 'Urgencia',
+    'emergencia' => 'Emergencia',
     'otro' => 'Otro',
 ][$tipo];
 
